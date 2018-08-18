@@ -99,7 +99,7 @@ class Order {
      *
      * @return  self
      */ 
-    public function setOrderStatus($orderStatus)
+    public function setOrderStatus(OrderStatusEnum $orderStatus)
     {
         $this->orderStatus = $orderStatus;
 
