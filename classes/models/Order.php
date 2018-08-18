@@ -105,5 +105,10 @@ class Order {
 
         return $this;
     }
+
+    public function save() {
+        return 1;
+    }
+
 }
 ?>

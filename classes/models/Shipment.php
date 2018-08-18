@@ -3,10 +3,19 @@ class Shipment {
     private $shipmentId;
     private $shipmentDate;
     private $shipmentStatus;
+    private $shipmentAddress;
     private $order;
     private $returnDate;
+    function getShipmentAddress() {
+        return $this->shipmentAddress;
+    }
 
-    /**
+    function setShipmentAddress($shipmentAddress) {
+        $this->shipmentAddress = $shipmentAddress;
+        return $this;
+    }
+
+        /**
      * Get the value of shipmentId
      */ 
     public function getShipmentId()
@@ -104,6 +113,10 @@ class Shipment {
         $this->returnDate = $returnDate;
 
         return $this;
+    }
+    
+    public function save(){
+        //TODO: need to setup save functionality
     }
 }
 ?>

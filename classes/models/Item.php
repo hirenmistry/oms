@@ -107,5 +107,10 @@ class Item {
 
         return $this;
     }
+
+    public static function getDataFromArray($citem) {
+        return new Item();
+    }
+
 }
 ?>

@@ -1,9 +1,8 @@
 <?php
 require_once('../globals/ShipmentEnum.php');
-class Shipment {
+class Shipmentor {
     private $order = 0; // order object that is going to ship
     private $shipmentId =0;
-    private $shipmentStatus=ShipmentEnum::Pending;
 
     public function __construct(){
 
@@ -32,6 +31,14 @@ class Shipment {
         $this->order = $order;
 
         return $this;
+    }
+    
+    public function save($shipmentArr){
+        $shipment = new Shipment();
+        $shipment->setShipmentAddress($shipmentArr['ShipmentAddress']);
+        $shipment->setShipmentDate($shipmentArr['ShipmentDate']);
+        $shipment->setShipmentStatus(new ShipmentEnum(ShipmentEnum::Pending));
+        $shipment->save();
     }
 
     private function generateShipmentId(){
