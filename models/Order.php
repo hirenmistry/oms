@@ -1,8 +1,4 @@
 <?php
-require_once('shipment.php');
-require_once('shipment.php');
-require_once('order.php');
-require_once('../globals/OrderStatusEnum.php');
 class Order {
     private $orderId;
     private $orderDate;
@@ -63,7 +59,7 @@ class Order {
      *
      * @return  self
      */ 
-    public function setItems($items = [])
+    public function setItems(ItemList $items)
     {
         $this->items = $items;
 

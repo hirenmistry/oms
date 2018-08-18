@@ -1,6 +1,4 @@
 <?php
-require_once('../globals/ShipmentEnum.php');
-require_once('order.php');
 class Shipment {
     private $shipmentId;
     private $shipmentDate;
